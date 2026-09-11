@@ -1,0 +1,838 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #000000;
+    border-bottom: 2px solid #FABF00;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header strong {
+    color: #FABF00;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #FABF00;
+}
+
+
+/* =========================================
+   MAIN / SEÇÕES
+========================================= */
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 100px 8%;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+#inicio {
+    min-height: calc(100vh - 80px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+
+    background-color: #000000;
+}
+
+#inicio > div {
+    max-width: 650px;
+}
+
+#inicio h1 {
+    color: #FFFFFF;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1.05;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+#inicio h1::first-line {
+    color: #FABF00;
+}
+
+#inicio p {
+    max-width: 550px;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 35px;
+}
+
+#inicio a {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background-color: #FABF00;
+    color: #000000;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    border: 2px solid #FABF00;
+
+    transition: all 0.3s ease;
+}
+
+#inicio a:hover {
+    background-color: #000000;
+    color: #FABF00;
+}
+
+#inicio > img {
+    width: 100%;
+    max-height: 650px;
+
+    object-fit: cover;
+
+    border-left: 5px solid #FABF00;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+section h2 {
+    position: relative;
+
+    margin-bottom: 50px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    text-transform: uppercase;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 5px;
+
+    background-color: #FABF00;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+#sobre {
+    background-color: #FFFFFF;
+    color: #000000;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#sobre h2,
+#sobre > p {
+    grid-column: 1 / -1;
+}
+
+#sobre > p {
+    max-width: 850px;
+
+    font-size: 1.1rem;
+
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#sobre article {
+    padding: 35px;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    border-left: 5px solid #FABF00;
+
+    transition: transform 0.3s ease;
+}
+
+#sobre article:hover {
+    transform: translateY(-8px);
+}
+
+#sobre article h3 {
+    color: #FABF00;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   SERVIÇOS
+========================================= */
+
+#servicos {
+    background-color: #000000;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#servicos h2 {
+    grid-column: 1 / -1;
+}
+
+#servicos article {
+    overflow: hidden;
+
+    background-color: #000000;
+
+    border: 1px solid #FFFFFF;
+
+    transition: all 0.3s ease;
+}
+
+#servicos article:hover {
+    border-color: #FABF00;
+    transform: translateY(-8px);
+}
+
+#servicos article img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+#servicos article:hover img {
+    transform: scale(1.05);
+}
+
+#servicos article h3,
+#servicos article p {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#servicos article h3 {
+    color: #FABF00;
+
+    font-size: 1.5rem;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#servicos article p {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   GALERIA
+========================================= */
+
+#galeria {
+    background-color: #FFFFFF;
+    color: #000000;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#galeria h2 {
+    grid-column: 1 / -1;
+}
+
+#galeria figure {
+    overflow: hidden;
+
+    background-color: #000000;
+
+    border: 3px solid #000000;
+}
+
+#galeria figure img {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+#galeria figure:hover img {
+    transform: scale(1.06);
+}
+
+#galeria figcaption {
+    padding: 15px;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    text-align: center;
+
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   PROFESSORES
+========================================= */
+
+#professores {
+    background-color: #000000;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+#professores h2 {
+    grid-column: 1 / -1;
+}
+
+#professores article {
+    background-color: #FFFFFF;
+    color: #000000;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+}
+
+#professores article:hover {
+    transform: translateY(-8px);
+}
+
+#professores article img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    display: block;
+}
+
+#professores article h3 {
+    color: #000000;
+
+    font-size: 1.5rem;
+
+    margin: 20px 25px 5px;
+}
+
+#professores article p {
+    margin: 0 25px 25px;
+
+    color: #000000;
+}
+
+
+/* =========================================
+   DEPOIMENTOS
+========================================= */
+
+#depoimentos {
+    background-color: #FFFFFF;
+    color: #000000;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#depoimentos h2 {
+    grid-column: 1 / -1;
+}
+
+#depoimentos article {
+    padding: 30px;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    border-top: 5px solid #FABF00;
+
+    transition: transform 0.3s ease;
+}
+
+#depoimentos article:hover {
+    transform: translateY(-8px);
+}
+
+#depoimentos article img {
+    width: 80px;
+    height: 80px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #FABF00;
+}
+
+#depoimentos blockquote {
+    margin-bottom: 20px;
+}
+
+#depoimentos blockquote p {
+    font-style: italic;
+}
+
+#depoimentos article > p strong {
+    color: #FABF00;
+}
+
+
+/* =========================================
+   CONTATO
+========================================= */
+
+#contato {
+    background-color: #000000;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+#contato h2,
+#contato > p,
+#contato address {
+    grid-column: 1;
+}
+
+#contato h2 {
+    margin-bottom: 20px;
+}
+
+#contato > p {
+    max-width: 550px;
+    margin-bottom: 20px;
+}
+
+#contato > img {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border: 2px solid #FABF00;
+}
+
+#contato address {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    font-style: normal;
+}
+
+#contato address a {
+    color: #FABF00;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+#contato address a:hover {
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 40px 8%;
+
+    background-color: #FFFFFF;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+footer nav a {
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: #FABF00;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+
+    /* HERO */
+
+    #inicio {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    #inicio h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+
+    /* SOBRE */
+
+    #sobre {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SERVIÇOS */
+
+    #servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* GALERIA */
+
+    #galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* DEPOIMENTOS */
+
+    #depoimentos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #depoimentos article:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        width: 100%;
+        justify-self: center;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 650px) {
+
+    /* HEADER */
+
+    header {
+        min-height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        position: relative;
+    }
+
+    header strong {
+        font-size: 1.4rem;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header nav ul {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px 18px;
+    }
+
+    header nav a {
+        font-size: 0.8rem;
+    }
+
+
+    /* SEÇÕES */
+
+    section {
+        padding: 65px 20px;
+    }
+
+
+    /* HERO */
+
+    #inicio {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 40px;
+    }
+
+    #inicio h1 {
+        font-size: clamp(2.3rem, 12vw, 3.5rem);
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    #inicio a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    #inicio > img {
+        max-height: 450px;
+
+        border-left: none;
+        border-top: 5px solid #FABF00;
+    }
+
+
+    /* SOBRE */
+
+    #sobre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sobre > p {
+        margin-bottom: 10px;
+    }
+
+    #sobre article {
+        width: 100%;
+    }
+
+
+    /* SERVIÇOS */
+
+    #servicos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #servicos article {
+        width: 100%;
+    }
+
+    #servicos article img {
+        height: 250px;
+    }
+
+
+    /* GALERIA */
+
+    #galeria {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #galeria figure {
+        width: 100%;
+    }
+
+    #galeria figure img {
+        height: 280px;
+    }
+
+
+    /* PROFESSORES */
+
+    #professores {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #professores article {
+        width: 100%;
+    }
+
+    #professores article img {
+        height: 400px;
+    }
+
+
+    /* DEPOIMENTOS */
+
+    #depoimentos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #depoimentos article:last-child {
+        max-width: none;
+    }
+
+
+    /* CONTATO */
+
+    #contato {
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 30px;
+    }
+
+    #contato > img {
+        order: -1;
+
+        width: 100%;
+        height: 300px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 35px 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    footer nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px 20px;
+    }
+
+}
+
